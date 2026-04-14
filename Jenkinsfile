@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/abhikrishu2814/abhishek-learning.git'
-            }
-        }
-
         stage('Build Image') {
             steps {
                 sh 'docker build -t cicd-app:latest .'
