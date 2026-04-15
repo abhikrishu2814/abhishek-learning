@@ -8,12 +8,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/abhikrishu2814/abhishek-learning.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh "docker build -t $IMAGE:$TAG ."
